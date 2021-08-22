@@ -1,0 +1,30 @@
+-- ============ MONKEY PATCHES FOR BONOBOS ==============================
+
+function bind_campfire.use_campfire(actor,zone,p) -- called from game_tutorials.xml
+	local pos = db.actor:position()
+	printf("the patch was called") 
+	for id,binder in pairs(bind_campfire.campfires_all) do 
+		if (binder and binder.campfire) then
+			if (pos:distance_to_sqr(binder.object:position()) <= 2) then
+				if (binder.campfire:is_on()) then 
+					bind_campfire.campfire_go_off(binder.campfire)
+					--binder.campfire:turn_off()
+				else
+					local obj_item = db.actor:object("hobo_match")
+					if obj_item then
+						bind_campfire.actor_on_item_use(obj_item, nil, binder.campfire)
+					else
+						actor_menu.set_msg(1, game.translate_string("st_ui_campfire_prereq"),3)
+					end
+				end
+			end
+		end 
+	end 
+end
+
+function bind_campfire.actor_on_item_use(obj, _, cf)
+	local sec = obj:section()
+	if (sec == "hobo_match") then
+		bind_campfire.campfire_go_on(obj, cf)
+	end
+end
