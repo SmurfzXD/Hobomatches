@@ -1,0 +1,366 @@
+
+;; ===========================< Loadout >=============================
+;; To add items in the item lists:
+;; -------------------------------
+;; add a new line: "item_section			= value_1,value_2,value3" under the correct section below
+;; "item_section": is the section name of the your item. NOTE: don't make lines with the same "item_section", only the last one will be read
+;; "value_1": (boolean  value, must be true or false) determines wether this item should be added to player's inventory list (false) or to the loadout pick list (true)
+;; "value_2": (number) the amount of the said item
+;; "value_3": (number) how many points it requires
+;; "value_4": (number) what progression difficulty is this item locked at (2 means it's available for difficulty 1 and 2) [no value means its available for all difficulties]
+;; ========================================================
+;; put your custom items under "custom" section, they will always appear to pick from
+;; NOTE: you will get a single bolt only no matter how many you put in here, due to technical engine reasons
+
+
+[points]
+total_points_eco_1 = 1000
+total_points_eco_2 = 700
+total_points_eco_3 = 400
+
+
+[custom]	
+
+[shared]:custom
+cash 					        = false,1,0
+device_pda_1 			        = false,1,0
+device_flashlight 		        = false,1,0
+itm_backpack			        = false,1,0
+hobo_matchbox 			        = false,1,0
+flask 					        = false,1,0
+wpn_bm16			            = true,1,400
+;wpn_ump45			            = true,1,400,3
+;mag_wpn_ump45_11.43x23_fmj      = true,3,1,2	
+cigarettes_lucky		        = true,1,100
+cigarettes_russian		        = true,1,80
+vodka 					        = true,2,60
+bread					        = true,2,50
+energy_drink			        = true,2,50
+beans					        = true,1,100
+tomato					        = true,1,60
+kolbasa					        = true,2,100
+batteries_dead			        = true,3,50
+detector_radio			        = true,1,300
+detector_geiger			        = true,1,250
+lead_box				        = true,1,250
+grooming				        = true,1,125,2
+charcoal				        = true,1,100
+cooking					        = true,1,150
+detector_simple			        = true,1,300,2
+bandage					        = true,2,50
+antirad					        = true,1,125
+medkit							= true,2,100
+drug_anabiotic			        = true,1,200
+drug_psy_blockade		        = true,1,150
+device_glowstick_blue			= true,2,10
+device_glowstick				= true,2,10
+device_glowstick_red			= true,2,10
+device_glowstick_orange			= true,2,10
+grenade_f1				        = true,1,170,2						  						  
+ammo_9x18_fmj					= true,1,60,2
+ammo_9x18_ap     			    = true,1,120,1
+ammo_9x19_fmj					= true,1,60,2
+ammo_9x19_ap					= true,1,120,1
+ammo_5.45x39_fmj				= true,1,75,2
+ammo_5.45x39_ap					= true,1,150,1
+ammo_7.62x39_fmj				= true,1,100,1
+ammo_7.62x39_ap					= true,1,200,1
+
+[stalker_loadout]:shared
+helm_resp			            = false,1,0
+novice_outfit		            = false,1,0
+wpn_pm				            = false,1,0
+wpn_knife 				        = false,1,0
+stalker_patch			        = false,1,0
+bolt 					        = false,1,0
+bread					        = false,1,0
+stalker_outfit			    	= true,1,500,2
+stalker_salamander_outfit		= true,1,650,1
+;mag_wpn_ak74m_5.45x39_fmj		= true,3,1,1
+;mag_wpn_kiparis_9x18_fmj        = true,3,1
+;mag_wpn_pm_9x18_fmj             = false,3,1
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1,2
+
+
+;	stalker weapons
+wpn_ak74u_old					= true,1,600,2	;NO DOVETAIL
+wpn_kiparis						= true,1,275
+wpn_ak74m						= true,1,750,1
+wpn_mossberg590					= true,1,850,1
+
+[bandit_loadout]:shared
+helm_cloth_mask	                = false,1,0
+trenchcoat_outfit	            = false,1,0
+wpn_pm				            = false,1,0
+wpn_knife 				        = false,1,0
+bandit_patch			        = false,1,0
+bolt_bullet 			        = false,1,0
+vodka					        = false,1,0
+banditmerc_outfit				= true,1,500,2
+;mag_wpn_ak74_5.45x39_fmj       = true,3,1,1
+;mag_wpn_vz61_9x19_fmj			= true,3,1
+;mag_wpn_pm_9x18_fmj             = false,3,1
+;mag_wpn_ump45_11.43x23_fmj      = true,3,1,2
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1,1
+
+;	bandit weapons
+wpn_ump45			            = true,1,500,2
+wpn_ak74u_old					= true,1,600,1	;NO DOVETAIL
+wpn_vz61                        = true,1,300
+
+[ecolog_loadout]:shared
+helm_resp			            = false,1,0
+novice_outfit		            = false,1,0
+wpn_glock17			            = false,1,0
+wpn_knife 				        = false,1,0
+ecolog_patch			        = false,1,0
+bolt 					        = false,1,0
+antirad					        = false,1,0
+;mag_wpn_glock17_9x19_fmj        = false,3,1
+;mag_wpn_vz61_9x19_fmj           = true,3,1
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1,2
+;mag_wpn_sks_7.62x39_fmj         = true,3,1,1
+ecolog_guard_outfit				= true,1,500,2
+
+;	ecolog weapons
+wpn_ak74u_old					= true,1,600,2	;NO DOVETAIL
+wpn_sks_tac						= true,1,900,1
+wpn_mossberg590					= true,1,850,1
+wpn_vz61                        = true,1,300
+
+[dolg_loadout]:shared
+helm_resp			            = false,1,0
+dolg_novice_outfit	            = false,1,0
+wpn_pmm				            = false,1,0
+wpn_knife2 				        = false,1,0
+dolg_patch				        = false,1,0
+bolt_bullet 			        = false,1,0
+stimpack				        = false,1,0
+trenchcoat_dolg_brown_outfit	= true,1,500,2
+;mag_wpn_kiparis_9x18_fmj        = true,3,1
+;mag_wpn_pmm_9x18_fmj            = false,3,1
+;mag_wpn_aks74_5.45x39_fmj       = true,3,1,2
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1,2
+;mag_wpn_ak74m_5.45x39_fmj		= true,3,1,1
+
+;	dolg weapons
+grenade_rgd5					= true,1,80
+wpn_ak74u_old					= true,1,600,2	;NO DOVETAIL
+wpn_ak74m						= true,1,750,1
+wpn_mossberg590					= true,1,850,1
+wpn_kiparis						= true,1,275
+
+[freedom_loadout]:shared
+helm_resp				        = false,1,0
+svoboda_light_outfit	        = false,1,0
+wpn_glock17				        = false,1,0
+wpn_knife 				        = false,1,0
+freedom_patch			        = false,1,0
+bolt_bullet 			        = false,1,0
+marijuana				        = false,1,0
+light_freedom_outfit	        = true,1,500,2
+;mag_wpn_ak74m_5.45x39_fmj		= true,3,1,2
+;mag_wpn_kiparis_9x18_fmj        = true,3,1
+;mag_wpn_glock17_9x19_fmj        = false,3,1
+;mag_wpn_akm_7.62x39_fmj			= true,3,1,1
+;mag_wpn_ak74u_5.45x39_fmj		= true,3,1,2
+
+;	freedom weapons
+wpn_mossberg590					= true,1,850,1
+wpn_akm		    		        = true,1,750,1
+wpn_ak74u_old					= true,1,600,2	;NO DOVETAIL
+wpn_kiparis						= true,1,275
+
+[killer_loadout]:shared
+helm_rp_bala		            = false,1,0
+merc_outfit		                = false,1,0
+wpn_glock17			            = false,1,0
+wpn_knife 				        = false,1,0
+killer_patch				    = false,1,0
+bolt 					        = false,1,0
+swiss_knife				        = false,1,0
+;mag_wpn_glock17_9x19_fmj        = false,3,1
+;mag_wpn_ak105_5.45x39_fmj       = true,3,1,2
+merc_fighter_outfit	            = true,1,500,2
+;mag_wpn_kiparis_9x18_fmj        = true,3,1
+;mag_wpn_m4_5.56x45_fmj  		= true,3,1,1
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1,2
+
+;	killer weapons
+grenade_rgd5					= true,1,100
+wpn_remington870				= true,1,850,1
+wpn_ak74u_old					= true,1,600,2	;NO DOVETAIL
+;wpn_ak74m						= true,1,750,1
+wpn_m4							= true,1,750,1
+wpn_mossberg590					= true,1,850,1
+wpn_kiparis						= true,1,275
+
+[army_loadout]:shared
+helm_bandana	                = false,1,0
+army_outfit		                = false,1,0
+wpn_pm			                = false,1,0
+wpn_knife2 				        = false,1,0
+army_patch				        = false,1,0
+bolt_bullet 			        = false,1,0
+cigarettes_russian		        = false,1,0
+mag_wpn_pm_9x18_fmj             = false,3,1
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1,2
+;mag_wpn_kiparis_9x18_fmj        = true,3,1
+;mag_wpn_ak74m_5.45x39_fmj		= true,3,1,1
+equ_military_pack				= true,1,500,2
+
+;	army weapons
+grenade_f1						= true,1,150
+wpn_ak74u_old					= true,1,600,2	;NO DOVETAIL
+wpn_ak74m						= true,1,750,1
+wpn_mossberg590					= true,1,850,1
+wpn_kiparis						= true,1,275
+
+[monolith_loadout]:shared
+helm_resp			            = false,1,0
+monolith_outfit	                = false,1,0
+wpn_glock17				        = false,1,0
+wpn_knife2 				        = false,1,0
+monolith_patch			        = false,1,0
+bolt 					        = false,1,0
+light_monolit_outfit	        = true,1,500
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1,2
+;mag_wpn_kiparis_9x18_fmj		= true,3,1
+;mag_wpn_glock17_9x19_fmj        = false,3,1
+;mag_wpn_ak12_5.45x39_fmj        = true,3,1,1
+
+;	monolith weapons
+grenade_gd-05					= true,1,100
+wpn_mossberg590					= true,1,850,1
+;wpn_gauss						= true,1,1000,1
+wpn_ak12_custom                 = true,1,850,1
+wpn_ak74u_old					= true,1,600,2	;NO DOVETAIL
+wpn_kiparis						= true,1,275
+
+[csky_loadout]:shared
+helm_cloth_mask	                = false,1,0
+cs_novice_outfit	            = false,1,0
+wpn_pmm			                = false,1,0
+wpn_knife 				        = false,1,0
+csky_patch				        = false,1,0
+bolt 					        = false,1,0
+batteries_dead			        = false,1,0
+mag_wpn_pmm_9x18_fmj            = false,3,0
+cs_light_outfit	                = true,1,500
+kit_hunt						= true,1,250
+;mag_wpn_ak74m_5.45x39_fmj		= true,3,1,2
+;mag_wpn_ak74u_5.45x39_fmj		= true,3,1,2
+;mag_wpn_kiparis_9x18_fmj        = true,3,1
+
+;	csky weapons
+wpn_toz34						= true,1,700,2
+wpn_kiparis						= true,1,180
+wpn_ak74u_old					= true,1,600,2	;NO DOVETAIL
+
+[renegade_loadout]:shared
+helm_cloth_mask	                = false,1,0
+renegademerc_outfit	            = false,1,0
+wpn_pm				            = false,1,0
+wpn_knife 				        = false,1,0
+renegade_patch			        = false,1,0
+bolt_bullet 			        = false,1,0
+vodka					        = false,1,0
+;mag_wpn_pm_9x18_fmj             = false,3,1
+;mag_wpn_ak74m_5.45x39_fmj		= true,3,1,1
+;mag_wpn_ak74u_5.45x39_fmj		= true,3,1,1
+;mag_wpn_bizon_9x18_fmj			= true,3,1,2
+;mag_wpn_kiparis_9x18_fmj        = true,3,1
+
+;	renegade weapons
+wpn_bizon						= true,1,450,2
+wpn_ak74u_tac					= true,1,850,1
+wpn_kiparis						= true,1,275
+
+[greh_loadout]:shared
+helm_cloth_mask	                = false,1,0
+greh_trenchcoat_outfit	        = false,1,0
+wpn_toz106				        = false,1,0
+wpn_knife 				        = false,1,0
+greh_patch			            = false,1,0
+bolt 			                = false,1,0
+hide_pseudodog				    = false,1,0
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1,1
+;mag_wpn_ak12_5.45x39_fmj       	= true,3,1,1
+;mag_wpn_kiparis_9x18_fmj        = true,3,1
+;mag_wpn_ump45_11.43x23_fmj      = true,3,1,2
+
+;	greh weapons
+grenade_f1						= true,1,100
+wpn_ak12_custom					= true,1,850,1
+wpn_kiparis						= true,1,275
+wpn_ump45			            = true,1,500,2
+
+[isg_loadout]:shared
+helm_cloth_mask	                = false,1,0
+isg_outfit	                    = false,1,0
+wpn_beretta_camo		        = false,1,0
+wpn_knife 				        = false,1,0
+isg_patch			            = false,1,0
+bolt_bullet 			        = false,1,0
+cleaning_kit_u					= false,1,0
+grenade_gd-05			        = false,1,0
+wpn_ak74u_isg                   = false,1,0
+;mag_wpn_ak74u_5.45x39_fmj       = true,3,1
+;mag_wpn_beretta_9x19_fmj		= false,3,0
+
+;	isg weapons
+
+[zombied_loadout]:shared,stalker_loadout
+
+
+;; ===========================< Ammo >=============================
+;-- defined ammo type per weapon here (weapon section = ammo section) - Example: wpn_glock = ammo_9x19_fmj_bad
+;-- when a weapon in this section found in your inventory, you will be given the ammo stated for it
+;-- otherwise, ammo type will be the first one define in weapon's config
+[ammo_type_per_wpn]
+
+
+;-- define ammo count per ammo section (section = count) here - Example: ammo_9x19_fmj_bad = 60
+;-- When an ammo type is picked for a weapon in your inventory, it will be given to player by the count defined here
+;-- otherwise, ammo's count will be a full box size
+[ammo_count]
+
+;; ===========================< Money >=============================
+[stalker_money]
+money = 4000
+
+[bandit_money]
+money = 4000
+
+[ecolog_money]
+money = 6400
+
+[dolg_money]
+money = 5600
+
+[freedom_money]
+money = 5600
+
+[killer_money]
+money = 6000
+
+[army_money]
+money = 4800
+
+[monolith_money]
+money = 6400
+
+[csky_money]
+money = 6400
+
+[renegade_money]
+money = 3200
+
+[greh_money]
+money = 0
+
+[isg_money]
+money = 12000
+
+[zombied_money]
+money = 4000

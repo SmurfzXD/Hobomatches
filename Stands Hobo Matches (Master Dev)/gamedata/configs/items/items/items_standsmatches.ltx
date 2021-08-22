@@ -1,0 +1,55 @@
+;;--==================== Strike Anywhere Match ===================================================
+
+[hobo_match]:tch_part
+$spawn 				                               = "devices\pda"
+visual				                               = dynamics\drink\drink_match0.ogf
+description			                                   = st_hobo_match_descr
+inv_name			                                   = st_hobo_match
+inv_name_short			                               = st_hobo_match
+icons_texture							 		       = ui\ui_icon_stands_hobomatches
+inv_grid_width			                               = 1
+inv_grid_height			                               = 1
+inv_grid_x			                                   = 2
+inv_grid_y			                                   = 0
+cost				                                   = 47
+inv_weight			                                   = 0.01
+can_trade			                               	   = false
+quest_item      	                                   = false
+use_condition                                          = false 
+;use_sound			                                   = interface\inv_matches
+remove_after_use                                       = false
+attach_angle_offset		                               = -0.287979, 1.560923, 1.544060
+attach_position_offset		                           = 0.096910, -0.013594, 0.107925
+attach_bone_name		                               = bip01_r_hand
+auto_attach				                               = false
+tier = 1
+replacement = 0.03125
+use1_functor                = stands_hobomatches.try_box
+use1_action_functor         = stands_hobomatches.box_matches	
+
+;;--========================= Box of Strike Anywhere Matches =======================================
+
+[hobo_matchbox]:tch_part
+$spawn 				                             	   = "devices\pda"
+visual				                              	   = dynamics\drink\drink_match0.ogf
+description			                                   = st_hobo_matchbox_descr
+inv_name			                                   = st_hobo_matchbox
+inv_name_short		                                   = st_hobo_matchbox
+icons_texture							 		       = ui\ui_icon_stands_hobomatches
+inv_grid_width			                               = 2
+inv_grid_height			                               = 1
+inv_grid_x			                                   = 0
+inv_grid_y			                                   = 0
+inv_weight			                                   = 0.5
+can_trade			                               	   = true
+cost                                                   = 1500
+allow_repair                             		       = false
+snd_on_take								 		       = outfit
+use_condition                            		       = true
+degradation_factor									   = 0.03125
+script_binding                                         = matchbox_binder.bind
+;use_sound			                                   = interface\inv_matches
+remove_after_use                                       = false
+tier = 2                                      		  
+use1_functor                = stands_hobomatches.try_match
+use1_action_functor         = stands_hobomatches.take_match
