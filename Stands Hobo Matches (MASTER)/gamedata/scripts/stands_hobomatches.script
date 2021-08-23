@@ -89,10 +89,10 @@ function on_item_drag_dropped(from, to, slot_from, slot_to)
 	local item_from = from and from:section() or nil
 	local item_to = to and to:section() or nil
     if item_from == nil or item_to == nil then return end
-    -- only one is valid - item_from is hobo_match and item_to is hobo_matchbox 
-    local replace_amt = SYS_GetParam(2,item_from,"replacement")
+    -- item_from is hobo_match and item_to is hobo_matchbox 
+    local replace_amt = SYS_GetParam(2,item_from,"matchreplacement")	
     if (replace_amt ~= nil and item_to == "hobo_matchbox") then
-        -- repair the hobo_matchbox and discharge hobo_match
+        -- repair the hobo_matchbox and discharge hobo_match		
         print_dbg("Placing Match into Box")
         local final_uses = to:condition() + replace_amt
         if to:condition() < 1.0 then

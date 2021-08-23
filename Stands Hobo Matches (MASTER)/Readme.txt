@@ -1,9 +1,9 @@
 Special Thanks to Arti for helping me pull this off.
 
-last edited 08/22/2021
+last edited 08/23/2021
 
 
-Stands' Matches for the Chad Hobo v 1.1
+Stands' Matches for the Chad Hobo v 1.2
 
 For use with Escape from Pripyat as it overrides files from modpack.
 
@@ -19,6 +19,10 @@ new_game_loadouts
 - Add ability to store multiple matches at once
 
 ***CHANGE LOG***
+
+Version 1.2
+
+- Fixed Bugged interaction between Hobo Matches and Arti's Lootbox's Matches and Lockpicks (kits)
 
 Version 1.1
 
